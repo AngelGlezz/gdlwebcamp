@@ -209,6 +209,65 @@ ul {
     float: right;
 }
 
+/* lettering */
+
+h1.nombre-sitio span {
+    position: relative;
+    text-shadow: 0 0 30px black;
+}
+
+@media only screen and (min-width: 992px) {
+    .char1 {
+        top: 20px;
+        right: 20px;
+    }
+
+    .char2 {
+        top: 0;
+        left: -20px;
+    }
+
+    .char3 {
+        top: 10px;
+        right: 20px;
+    }
+
+    .char4 {
+        top: 5px;
+        right: 10px;
+    }
+
+    .char5 {
+        top: 15px;
+        right: 10px;
+    }
+
+    .char6 {
+        top: 5px;
+        left: 10px;
+    }
+
+    .char7 {
+        top: 20px;
+        left: -10px;
+    }
+
+    .char8 {
+        top: 0;
+        left: 10px;
+    }
+
+    .char9 {
+        top: 10px;
+        right: 20px;
+    }
+
+    .char10 {
+        top: 20px;
+        right: 20px;
+    }
+}
+
 /*  header  */
 div.hero {
     background-image: url(../img/encabezado.jpg);
@@ -300,6 +359,14 @@ h1.nombre-sitio {
 
 /*  barra  */
 
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 div.barra {
     background-color: #353535;
     padding: 20px 0;
@@ -319,9 +386,10 @@ div.logo img {
         width: 33%;
     }
 }
-/*  navegacion proncipal  */
+/*  navegacion principal  */
 nav.navegacion-principal {
     display: none;
+    width: 100%;
 }
 
 nav.navegacion-principal a {
@@ -334,7 +402,8 @@ nav.navegacion-principal a {
     width: 100%;
     display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 nav.navegacion-principal a:hover {
@@ -418,7 +487,7 @@ div.programa-evento {
     margin-top: 80px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     div.programa-evento {
         width: 70%;
     }
@@ -432,8 +501,6 @@ div.programa-evento {
 
 nav.menu-programa {
     width: 100%;
-    border-bottom: 1px solid #fe4918;
-    padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -450,6 +517,24 @@ nav.menu-programa a {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
     font-size: 1.2em;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #fe4918;
+}
+
+nav.menu-programa a.activo::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    height: 20px;
+    width: 30px;
+    bottom: -20px;
+    background-image: url('../img/talleres-flecha.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 768px) {
@@ -462,6 +547,11 @@ nav.menu-programa a i, div.detalle-evento p i {
     color: #fe4918;
     font-size: 1.6em;
     margin-right: 10px;
+}
+
+
+div.ocultar {
+    display: none;
 }
 
 /*  detalle evento  */
@@ -696,6 +786,7 @@ blockquote p:before {
 
 footer.info-testimonial {
     padding: 0;
+    background-color: transparent;
 }
 
 footer.info-testimonial img {
@@ -763,7 +854,7 @@ div.cuenta-regresiva ul li {
 }
 
 @media only screen and (min-width: 768px) {
-    div.cuenta-regresica ul li {
+    div.cuenta-regresiva ul li {
         width: 25%;
         float: left;
     }
@@ -776,14 +867,14 @@ footer {
     margin-top: 20px;
 }
 
-footer.contenedor > div {
+footer .contenedor > div {
     color: #fff;
     padding: 0 20px;
     font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-    footer.contenedor > div {
+    footer .contenedor > div {
         width: 33.3%;
         float: left;
     }
@@ -816,9 +907,146 @@ p.copyright {
     text-align: center;
 }
 
+/** INTERNAS  **/
 
+/** conferencia **/
 
+body.conferencia .navegacion-principal .activo {
+    border-bottom: 2px solid #fe4918;
+}
 
+div.galeria a {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/**  registro  **/
+form.registro h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+}
+
+form.registro label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h4 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fe4918;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+div.caja {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.campo {
+    padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.campo {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+div.paquetes .tabla-precio:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+div.paquetes .tabla-precio input {
+    clear: both;
+    width: 100px;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+div.contenido-dia {
+    padding: 20px;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    div.contenido-dia > div {
+        float: left;
+        width:  33.3%;
+    }
+}
+
+div.contenido-dia > div p {
+    text-align: left;
+}
+
+div.contenido-dia > div label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+div.contenido-dia > div input {
+    margin-right: 10px;
+}
+
+div.contenido-dia > div label time {
+    color: #fe4918;
+    font-weight: bold;
+}
+
+/**  resumen y registro  **/
+div.resumen p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+div.resumen div.extras {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+div.extras div.orden {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+div.extras div.orden input {
+    margin: 10px 0 0 0;
+}
+
+div.resumen div.total {
+    float: right;
+    width: 50%;
+    padding: 30px;
+}
+
+div.resumen input {
+    display: block;
+    margin: 10px auto;
+}
+
+div#lista_productos {
+    background-color: #e1e1e1;
+    padding: 20px;
+    display: none;
+}
+
+div#suma_total {
+    text-align: center;
+    font-size: 2em;
+    color: #fe4918;
+}
+
+div#error {
+    clear: both;
+}
 
 
 

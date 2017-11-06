@@ -55,7 +55,7 @@
                     <a href="#">Conferencia</a>
                     <a href="#">Calendario</a>
                     <a href="#">Invitados</a>
-                    <a href="#">Reservaciones</a>
+                    <a href="registro.html">Reservaciones</a>
                 </nav>
             </div>
         </div>
@@ -92,6 +92,36 @@
                                 <p><i class="fa fa-clock-o" aria-hidden="true"></i>20:00 Hrs.</p>
                                 <p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
                                 <p><i class="fa fa-user" aria-hidden="true"></i>Angel Glezz</p>
+                            </div>
+                            <a href="#" class="button float-right">Ver todos</a>
+                        </div>
+                        <div id="conferencias" class="info-curso ocultar clearfix">
+                            <div class="detalle-evento">
+                                <h3>Como ser freelancer</h3>
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i>10:00 Hrs.</p>
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
+                                <p><i class="fa fa-user" aria-hidden="true"></i>Gregorio Sanchez</p>
+                            </div>
+                            <div class="detalle-evento">
+                                <h3>Tcnologias del futuro</h3>
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i>17:00 Hrs.</p>
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
+                                <p><i class="fa fa-user" aria-hidden="true"></i>Susan Sanchez</p>
+                            </div>
+                            <a href="#" class="button float-right">Ver todos</a>
+                        </div>
+                        <div id="seminarios" class="info-curso ocultar clearfix">
+                            <div class="detalle-evento">
+                                <h3>Diseño UI/UX para móviles</h3>
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i>17:00 Hrs.</p>
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i>11 de Dic</p>
+                                <p><i class="fa fa-user" aria-hidden="true"></i>Harolld García</p>
+                            </div>
+                            <div class="detalle-evento">
+                                <h3>Aprende a programar en una mañana</h3>
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i>10:00 Hrs.</p>
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i>11 de Dic</p>
+                                <p><i class="fa fa-user" aria-hidden="true"></i>Susana Rivera</p>
                             </div>
                             <a href="#" class="button float-right">Ver todos</a>
                         </div>
@@ -135,7 +165,7 @@
                 <li>
                     <div class="invitado">
                         <img src="img/invitado6.jpg" alt="imagen invitado">
-                        <p>Susan Sanchezah</p>
+                        <p>Susan Sanchez</p>
                     </div>
                 </li>
             </ul>
@@ -143,10 +173,10 @@
         <div class="contador parallax">
             <div class="contenedor">
                 <ul class="resumen-evento clearfix">
-                    <li><p class="numero">6</p> Invitados</li>
-                    <li><p class="numero">15</p> Talleres</li>
-                    <li><p class="numero">3</p> Días</li>
-                    <li><p class="numero">9</p> Conferencias</li>
+                    <li><p class="numero"></p> Invitados</li>
+                    <li><p class="numero"></p> Talleres</li>
+                    <li><p class="numero"></p> Días</li>
+                    <li><p class="numero"></p> Conferencias</li>
                 </ul>
             </div>
         </div>
@@ -239,16 +269,16 @@
             <h2>Faltan</h2>
             <div class="cuenta-regresiva contenedor">
                 <ul class="clearfix">
-                    <li><p class="numero">80</p> días</li>
-                    <li><p class="numero">15</p> horas</li>
-                    <li><p class="numero">5</p> minutos</li>
-                    <li><p class="numero">30</p> segundos</li>
+                    <li><p id="dias" class="numero"></p> días</li>
+                    <li><p id="horas" class="numero"></p> horas</li>
+                    <li><p id="minutos" class="numero"></p> minutos</li>
+                    <li><p id="segundos" class="numero"></p> segundos</li>
                 </ul>
             </div>
         </section>
         <footer class="site-footer">
             <div class="contenedor clearfix">
-                <div class="fotter-informacion">
+                <div class="footer-informacion">
                     <h3>Sobre <span>gdlwebcamp</span></h3>
                     <p>Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo</p>
                 </div>
@@ -277,7 +307,12 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.lettering.js"></script>
         <script src="js/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6N0Y9WgslJ4dYYaHjbYtsibE2rZEsNgQ&callback=initMap" async defer></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
